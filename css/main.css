@@ -3,7 +3,7 @@
     --main-color: #2196F3;
     --main-color-alt: #1787e0;
     --main-transition: 0.3s;
-    --text-color: #949494;
+    --text-color: #777;
     --main-padding: 100px;
     --section-background: #ececec;
 }
@@ -553,6 +553,17 @@ header .main-nav .magnet_links ul li a i {
     background-color: var(--section-background);
     position: relative;
 }
+.gallery::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    background-image: linear-gradient(135deg, white 25%, transparent 25%), linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
 .gallery .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(302px, 1fr));
@@ -607,3 +618,188 @@ header .main-nav .magnet_links ul li a i {
     }
 }
 /* End Gallery */
+/* Start Features */
+.features {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.features .card {
+    border: 1px solid #ddd;
+}
+
+.features .card .image {
+    position: relative;
+    overflow: hidden;
+}
+
+.features .card .image img {
+    max-width: 100%;
+    display: block;
+}
+
+.features .card .image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.features .card .image::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    border-style: solid;
+    border-width: 0px 0px 170px 500px;
+    border-color: transparent transparent white transparent;
+    z-index: 2;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+}
+.features .card:hover .image::after {
+    border-width: 0px 500px 170px 0px;
+}
+.features .quality .image::before {
+    background-color: rgb(244 64 54 / 0.6);
+}
+
+.features .time .image::before {
+    background-color: rgb(0 150 136 / 0.6);
+}
+
+.features .passion .image::before {
+    background-color: rgb(3 169 244 / 0.6);
+}
+
+.features .card .text {
+    text-align: center;
+}
+
+.features .card .text h2 {
+    font-size: 35px;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.features .card .text h2::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+}
+
+.features .quality h2::after {
+    background-color: #f44036;
+}
+
+.features .time h2::after {
+    background-color: #009688;
+}
+
+.features .passion h2::after {
+    background-color: #03a9f4;
+}
+
+.features .card .text p {
+    padding: 20px;
+    color: var(--text-color);
+    line-height: 2;
+    font-size: 18px;
+}
+
+.features .card .text .link {
+    margin: 40px;
+}
+
+.features .card .text .link a {
+    font-weight: bold;
+    font-size: 21px;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.features .quality .link a {
+    color: #f44036;
+    border-color: #f44036;
+}
+
+.features .time a {
+    color: #009688;
+    border-color: #009688;
+}
+
+.features .passion a {
+    color: #03a9f4;
+    border-color: #03a9f4;
+}
+.features .card:hover a {
+    animation: coloring-word 0.2s linear forwards;
+    -webkit-animation: coloring-word 0.2s linear forwards;
+}
+@keyframes coloring-word {
+    0%, 90% {
+    }
+    100% {
+        color: white;
+    }
+}
+.features .card a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: -1;
+}
+.features .quality a::after {
+    background-color: #f44036;
+}
+.features .time a::after {
+    background-color: #009688;
+}
+.features .passion a::after {
+    background-color: #03a9f4;
+}
+@keyframes coloring-buttom {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: -50%;
+    }
+    100% {
+        left: 0;
+    }
+}
+.features .card:hover a::after {
+    animation: coloring-buttom 0.2s linear forwards;
+    -webkit-animation: coloring-buttom 0.2s linear forwards;
+}
+/* End Features */
