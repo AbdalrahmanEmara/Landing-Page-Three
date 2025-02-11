@@ -92,11 +92,11 @@ a {
 }
 
 .main-title::before {
-    left: -25%;
+    left: -20%;
 }
 
 .main-title::after {
-    right: -25%;
+    right: -20%;
 }
 
 .main-title:hover::before {
@@ -391,10 +391,6 @@ header .main-nav .magnet_links ul li a i {
     width: 600px;
     max-width: 100%;
     transform: translateY(40px);
-    -webkit-transform: translateY(40px);
-    -moz-transform: translateY(40px);
-    -ms-transform: translateY(40px);
-    -o-transform: translateY(40px);
     position: relative;
     animation: up-and-down 5s linear infinite;
     -webkit-animation: up-and-down 5s linear infinite;
@@ -404,14 +400,14 @@ header .main-nav .magnet_links ul li a i {
         display: none;
     }
 }
-.landing .up-down {
+.landing .up-down{
     position: absolute;
     color: var(--main-color);
     bottom: 30px;
     left: 50%;
-    animation: up-and-down 1s linear infite;
-    -webkit-animation: bouncing 1.5s infinite;
     transform: translateX(-50%);
+    animation: bouncing 1s linear infinite;
+    -webkit-animation: bouncing 1s linear infinite;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
@@ -426,10 +422,10 @@ header .main-nav .magnet_links ul li a i {
 
     0%,
     100% {
-        top: 0;
+        bottom: 30px;
     }
     50% {
-        top: -50px;
+        bottom: 50px;
     }
 }
 @keyframes bouncing {
@@ -856,3 +852,99 @@ header .main-nav .magnet_links ul li a i {
     font-size: 15px;
 }
 /* End Testimonials  */
+
+/* Start Team Members */
+.teamembers {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.teamembers .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.teamembers .card {
+    position: relative;
+    padding-top: 55px;
+    overflow: hidden;
+}
+.teamembers .card::before,
+.teamembers .card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    background-color: #f3f3f3;
+    top: 0;
+    right: 0;
+    border-radius: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.teamembers .card::before {
+    width: calc(100% - 60px);
+    z-index: -2;
+}
+.teamembers .card::after {
+    background-color: #e4e4e4;
+    width: 0;    
+    z-index: -1;
+}
+.teamembers .card:hover::after {
+    width: calc(100% - 60px);
+}
+.teamembers .card .title {
+    margin: 0 0 20px 80px;
+}
+.teamembers .card .title h3{
+    font-size: 22px;
+    color: var(--main-color);
+    margin: 25px  0 0 0;
+}
+.teamembers .card:hover h3 {
+    color: var(--text-color);
+    transition-delay: 0.1s;
+}
+.teamembers .card .title p {
+    margin: 10px 0 25px 0;
+    font-size: 15px;
+}
+.teamembers .card .image {
+    display: flex;
+    align-items: center;
+}
+.teamembers .card .image img {
+    border-radius: 10px;
+    width: calc(100% - 58px);
+    max-width: 100%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.teamembers .card:hover img {
+    filter: grayscale(1);
+    transition: var(--main-transition);
+    -webkit-filter: grayscale(1);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.teamembers .card .image ul.icons {
+    margin: 0 20px 0 20px;
+}
+.teamembers .card .image ul.icons li a {
+    display: block;
+    margin: 35px 0;
+}
+.teamembers .card .image ul.icons li i {
+    color: var(--text-color);
+}
+
+.teamembers .card .image ul.icons li a i:hover {
+    color: var(--main-color);
+}
+/* End Team Members */
