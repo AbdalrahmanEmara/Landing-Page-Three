@@ -958,11 +958,12 @@ header .main-nav .magnet_links ul li a i {
 .services .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
+    column-gap: 40px;
+    row-gap: 50px;
 }
 .services .box {
     background-color: white;
-    box-shadow: 6px 3px 30px 2px #c3c3c3, 2px 0px 4px #c3c3c3;
+    box-shadow: 6px 3px 30px 0px #c3c3c3, 2px 0px 4px 0px #c3c3c3;
     height: fit-content;
     counter-increment: number;
     transition: var(--main-transition);
