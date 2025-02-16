@@ -948,3 +948,156 @@ header .main-nav .magnet_links ul li a i {
     color: var(--main-color);
 }
 /* End Team Members */
+
+/* Start Services */
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-background);
+}
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.services .box {
+    background-color: white;
+    box-shadow: 6px 3px 30px 2px #c3c3c3, 2px 0px 4px #c3c3c3;
+    height: fit-content;
+    counter-increment: number;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    position: relative;
+}
+.services .box::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 100%;
+    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    height: 3px;
+    background-color: var(--main-color);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transform-origin: center;
+}
+.services .box:hover::before {
+    animation: coloring-border 0.2s linear forwards;
+    -webkit-animation: coloring-border 0.2s linear forwards;
+}
+@keyframes coloring-border {
+    from {
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        -o-transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        -moz-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+        -o-transform: scaleX(1);
+    }
+}
+.services .box:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.services .box .head {
+    height: 80%;
+    padding: 30px 0 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+}
+.services .box .head i {
+    color: #d5d5d5;
+    font-size: 60px;
+}
+.services .box .head h3 {
+    color: var(--main-color);
+    font-size: 24px;
+    margin: 20px;
+}
+.services .box .bar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    
+}
+.services .box .bar .number {
+    height: 100%;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.services .box .bar .number::before {
+    position: absolute;
+    content: counter(number);
+    color: white;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1;
+}
+.services .box .number::after {
+    content: "0";
+    position: absolute;
+    color: white;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 24px;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 1;
+}
+.services .box .bar .number .grey {
+    background-color: #d5d5d5;
+    height: 140px;
+    width: 126px;
+    transform: rotatez(30deg) translate(-45px, -25px);
+    -webkit-transform: rotatez(30deg) translate(-30px, -30px);
+    -moz-transform: rotatez(30deg) translate(-45px, -25px);
+    -ms-transform: rotatez(30deg) translate(-45px, -25px);
+    -o-transform: rotatez(30deg) translate(-45px, -25px);
+}
+.services .box .bar .number .blue {
+    background-color: var(--main-color);
+    height: 140px;
+    width: 115px;
+    transform: rotatez(30deg) translate(-132px, -150px);
+    -webkit-transform: rotatez(30deg) translate(-132px, -150px);
+    -moz-transform: rotatez(30deg) translate(-132px, -150px);
+    -ms-transform: rotatez(30deg) translate(-132px, -150px);
+    -o-transform: rotatez(30deg) translate(-132px, -150px);
+}
+.services .box .bar a {
+    margin-right: 20px;
+    color: var(--main-color);
+    font-size: 15px;
+}
+/* End Services */
