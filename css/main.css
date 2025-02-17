@@ -1102,3 +1102,54 @@ header .main-nav .magnet_links ul li a i {
     font-size: 15px;
 }
 /* End Services */
+/* Start Our Skills */
+.Our_Skills {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: white;
+}
+.Our_Skills .container {
+    display: flex;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    .Our_Skills .container img {
+        display: none;
+    }    
+}
+.Our_Skills .container .skills {
+    flex: 1;
+}
+.Our_Skills .skill h3 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+}
+.Our_Skills .skill h3 span {
+    color: var(--main-color);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transition: width 0.5s linear;
+    -webkit-transition: width 0.5s linear;
+    -moz-transition: width 0.5s linear;
+    -ms-transition: width 0.5s linear;
+    -o-transition: width 0.5s linear;
+}
+.Our_Skills .skill .progress {
+    width: 100%;
+    height: 30px;
+    background-color: #eee;
+}
+.Our_Skills .skill .progress span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+}
+/* End Our Skills */
