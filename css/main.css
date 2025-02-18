@@ -1239,3 +1239,157 @@ header .main-nav .magnet_links ul li a i {
     line-height: 1.8;
 }
 /* End How It Works */
+/* Start Latest Events */
+.events {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: white;
+}
+.events .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.events .container img {
+    max-width: 460px;
+}
+@media (max-width: 991px) {
+    .events .container img {
+        display: none;
+    }
+}
+.events .info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-flow: wrap column;
+}
+.events .info .timer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+.events .info .unit {
+    display: flex;
+    flex-flow: wrap column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transition: border var(--main-transition);
+    -webkit-transition: border var(--main-transition);
+    -moz-transition: border var(--main-transition);
+    -ms-transition: border var(--main-transition);
+    -o-transition: border var(--main-transition);
+}
+.events .info .unit:hover {
+    border-color: var(--main-color);
+}
+.events .info .timer .unit span {
+    display: block;
+}
+.events .info .timer .unit span:first-child {
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px 13px;
+}
+.events .info .timer .unit span:last-child {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    font-size: 12px;
+}
+.events .info h2 {
+    font-size: 33px;
+    margin: 40px 0 30px 0;
+}
+.events .info p {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 19px;
+    line-height: 1.7;
+}
+.events .subscribe {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+.events .subscribe form {
+    width: 600px;
+    padding: 30px 40px;
+    background-color: #f4f4f4;
+    border-radius: 60px;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    -ms-border-radius: 60px;
+    -o-border-radius: 60px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.events .subscribe input {
+    padding: 20px;
+    border: 0;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.events .subscribe input[type="email"] {
+    flex: 1;
+    caret-color: var(--main-color);
+}
+.events .subscribe input[type="email"]:focus {
+    outline: 0;
+}
+.events .subscribe input[type="email"]::placeholder {
+    transition: opacity var(--main-transition);
+    -webkit-transition: opacity var(--main-transition);
+    -moz-transition: opacity var(--main-transition);
+    -ms-transition: opacity var(--main-transition);
+    -o-transition: opacity var(--main-transition);
+}
+.events .subscribe input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+.events .subscribe input[type="submit"] {
+    width: 23%;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.events .subscribe input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+@media (max-width: 767px) {
+    .events .subscribe form,
+    .events .subscribe input[type="email"],
+    .events .subscribe input[type="submit"] {
+        width: 100%;
+        padding: 20px;
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+    }
+}
+/* End Latest Events */
