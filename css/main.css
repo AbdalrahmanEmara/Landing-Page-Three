@@ -1406,12 +1406,38 @@ header .main-nav .magnet_links ul li a i {
 }
 .Pricing .container .category {
     background-color: white;
-    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
-                0px 2px 4px rgb(0 0 0 / 11%);
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),                0px 2px 4px rgb(0 0 0 / 11%);
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
+@media (min-width: 1200px) {
+    .Pricing .container .category.most-popular {
+        top: -20px;
+    }
+}
+.Pricing .category.most-popular .label {
+    position: absolute;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    padding: 10px 10px 35px;
+    right: 20px;
+}
+.Pricing .category.most-popular .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 1px;
+    border-style: solid;
+    border-color: transparent transparent white;
+    border-width: 20px;
+}
+
 .Pricing .category::before,
 .Pricing .category::after {
     content: "";
