@@ -1393,3 +1393,118 @@ header .main-nav .magnet_links ul li a i {
     }
 }
 /* End Latest Events */
+/* Start Pricing Plans */
+.Pricing {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--section-background);
+}
+.Pricing .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.Pricing .container .category {
+    background-color: white;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%),
+                0px 2px 4px rgb(0 0 0 / 11%);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.Pricing .category::before,
+.Pricing .category::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(246, 246, 246);
+    z-index: -1;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.Pricing .category::before {
+    left: -100%;
+}
+.Pricing .category:hover::before {
+    left: 0;
+}
+.Pricing .category::after {
+    top: 50%;
+    right: -100%
+}
+.Pricing .category:hover::after {
+    right: 0;
+}
+.Pricing .category .main {
+    text-align: center;
+}
+.Pricing .category h3 {
+    text-align: center;
+    margin: 33px auto;
+    font-size: 25px;
+}
+.Pricing .category img {
+    width: 80px;
+}
+.Pricing .category .price {
+    color: var(--main-color);
+    font-size: 60px;
+    font-weight: bold;
+    margin: 30px 0 40px;
+    position: relative;
+}
+.Pricing .category .price::before {
+    content: "Per Month";
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--text-color);
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+.Pricing .category ul li {
+    display: block;
+    position: relative;
+    padding: 20px;
+    border-top: 1px solid var(--section-background);
+}
+.Pricing .category ul li i {
+    padding-right: 8px;
+    font-size: 18px;
+    color: var(--main-color);
+}
+.Pricing .category a {
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
+    border: 2px solid var(--main-color);
+    width: fit-content;
+    margin: 25px auto 45px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: var(--main-color);
+    font-weight: bold;
+    background-color: white;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.Pricing .category a:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+/* End Pricing Plans */
