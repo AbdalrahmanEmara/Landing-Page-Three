@@ -1683,3 +1683,87 @@ header .main-nav .magnet_links ul li a i {
     font-style: italic;
 }
 /* End Status */
+/* Start Request A Discount */
+.discount {
+    display: flex;
+    flex-wrap: wrap;
+}
+.discount h2.head-discount {
+    margin: 30px 0;
+    font-size: 40px;
+    letter-spacing: -2px;
+}
+.discount .info {
+    padding: 0 20px;
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    flex-basis: 50%;
+}
+@media (max-width: 992px) {
+    .discount .info {
+        flex-basis: 100%;
+    }
+}
+.discount .info p {
+    margin: 25px auto;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 500px;
+}
+.discount .info img {
+    width: 300px;
+}
+.discount .request {
+    padding: 0 20px;
+    text-align: center;
+    flex-basis: 50%;
+}
+@media (max-width: 992px) {
+    .discount .request {
+        flex-basis: 100%;
+    }
+}
+.discount .request form {
+    width: 300px;
+    margin: 35px auto;
+}
+.discount .request .input {
+    width: 100%;
+    display: block;
+    background-color: #f6f6f6;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: none;
+    outline: 0;
+    caret-color: var(--main-color);
+}
+.discount .request .input:focus {
+    outline: none;
+}
+.discount .request textarea.input {
+    resize: none;
+    height: 200px;
+}
+.discount .request .input:not(:last-child) {
+    border-bottom: 1px solid #aaa;
+}
+.discount .request .input::placeholder {
+    font-size: 15px;
+}
+.discount .request input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.discount .request input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+/* End Request A Discount */
